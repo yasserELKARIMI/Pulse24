@@ -1,0 +1,67 @@
+{
+  "name": "roots/sage",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "WordPress starter theme with a modern development workflow",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    {
+      "name": "Said Hourdane",
+      "email": "h.said@pulse.digital",
+      "homepage": "https://ulse.digital"
+    },
+    {
+      "name": "Yazid",
+      "email": "yazid@pulse.digital",
+      "homepage": "https://ulse.digital"
+    },    {
+      "name": "Simo",
+      "email": "simo@pulse.digital",
+      "homepage": "https://ulse.digital"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/sage/issues",
+    "forum": "https://discourse.roots.io/"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "log1x/acf-composer": "^3.0",
+    "log1x/sage-directives": "^2.0",
+    "log1x/sage-svg": "^1.1",
+    "roots/acorn": "^4.1"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.13"
+  },
+  "suggest": {
+    "log1x/sage-directives": "A collection of useful Blade directives for WordPress and Sage (^1.0)."
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "acorn": {
+      "providers": [
+        "App\\Providers\\ThemeServiceProvider"
+      ]
+    }
+  }
+}
